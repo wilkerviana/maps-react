@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const AddressInfo = ({ address, closeInfo }) => (
   <div className="address-info">
@@ -11,5 +12,10 @@ const AddressInfo = ({ address, closeInfo }) => (
     <span>{address.zipcode}</span>
   </div>
 );
+
+AddressInfo.propTypes = {
+  address: PropTypes.object,
+  closeInfo: PropTypes.func
+};
 
 export default AddressInfo;

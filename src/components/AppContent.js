@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import Search from "./Search";
 import AddressInfo from "./AddressInfo";
 
@@ -9,5 +9,12 @@ const AppContent = ({ address, handleSearch, getAddress, closeInfo }) => (
     {!!address && <AddressInfo address={address} closeInfo={closeInfo} />}
   </div>
 );
+
+AppContent.propTypes = {
+  address: PropTypes.object,
+  handleSearch: PropTypes.func,
+  getAddress: PropTypes.func,
+  closeInfo: PropTypes.func
+};
 
 export default AppContent;

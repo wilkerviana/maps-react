@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Actions from "./Actions";
 
 const Search = ({ handleSearch, getAddress }) => (
@@ -17,5 +18,10 @@ const Search = ({ handleSearch, getAddress }) => (
     </form>
   </div>
 );
+
+Search.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  getAddress: PropTypes.func.isRequired
+};
 
 export default Search;
