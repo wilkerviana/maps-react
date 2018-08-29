@@ -43,16 +43,14 @@ export default class App extends Component {
     fetch(map)
       .then(response => response.json())
       .then(address =>
-        setTimeout(() => {
-          address.results.map(address => {
-            return this.setState({
-              location: {
-                lat: address.geometry.location.lat,
-                lng: address.geometry.location.lng
-              }
-            });
+        address.results.map(address => {
+          return this.setState({
+            location: {
+              lat: address.geometry.location.lat,
+              lng: address.geometry.location.lng
+            }
           });
-        }, 1000)
+        })
       );
   }
 
