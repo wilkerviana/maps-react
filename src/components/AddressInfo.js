@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const AddressInfo = ({ address, closeInfo }) => (
-  <div className="address-info">
+  <div>
     <button className="btn-close" onClick={closeInfo}>
       x
     </button>
